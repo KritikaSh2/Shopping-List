@@ -259,21 +259,27 @@ class ListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(
-        name,
-        style: TextStyle(
-          fontSize: 25,
-        ),
-      ),
-      leading: Checkbox(
+      title: Text(name,
+          style: check == true
+              ? TextStyle(
+                  fontSize: 25,
+                  decoration: TextDecoration.lineThrough,
+                )
+              : TextStyle(
+                  fontSize: 25,
+                )),
+      leading: Text(price.toString(),
+          style: check == true
+              ? TextStyle(
+                  fontSize: 25,
+                  decoration: TextDecoration.lineThrough,
+                )
+              : TextStyle(
+                  fontSize: 25,
+                )),
+      trailing: Checkbox(
         value: check,
         onChanged: checkCallback,
-      ),
-      trailing: Text(
-        price.toString(),
-        style: TextStyle(
-          fontSize: 25,
-        ),
       ),
       subtitle: Text(
         time,
