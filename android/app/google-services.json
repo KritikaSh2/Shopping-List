@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "34115040299",
+    "project_id": "gdsc-app-task",
+    "storage_bucket": "gdsc-app-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34115040299:android:af6be9e4fbc0d20252e66e",
+        "android_client_info": {
+          "package_name": "com.mayankk.gdsc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34115040299-nihr01j8clvjafo72jakvc9k6eqhcra5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS46xNqAe8kKSSpmd59RPig11xnBx4nPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34115040299-nihr01j8clvjafo72jakvc9k6eqhcra5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
