@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "34115040299",
-    "project_id": "gdsc-app-task",
-    "storage_bucket": "gdsc-app-task.appspot.com"
+    "project_number": "568155586940",
+    "project_id": "hacktoberfest-d4192",
+    "storage_bucket": "hacktoberfest-d4192.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:34115040299:android:af6be9e4fbc0d20252e66e",
+        "mobilesdk_app_id": "1:568155586940:android:9cdd1e492d0434c2a424f9",
         "android_client_info": {
           "package_name": "com.mayankk.gdsc"
         }
       },
       "oauth_client": [
         {
-          "client_id": "34115040299-nihr01j8clvjafo72jakvc9k6eqhcra5.apps.googleusercontent.com",
+          "client_id": "568155586940-qva4120tt55535tktjsgie0qcso5igrd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDS46xNqAe8kKSSpmd59RPig11xnBx4nPE"
+          "current_key": "AIzaSyAjWIRZB8Com6ZLWY85m1EKyRyaJZI7w7A"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "34115040299-nihr01j8clvjafo72jakvc9k6eqhcra5.apps.googleusercontent.com",
+              "client_id": "568155586940-qva4120tt55535tktjsgie0qcso5igrd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
