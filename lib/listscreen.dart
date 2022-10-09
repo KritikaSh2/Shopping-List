@@ -133,7 +133,8 @@ class Liststate extends State<Listscreen> {
                               bottomRight: Radius.circular(10.0),
                             )),
                         child: ListS(items),
-                      )),
+                      ),
+                      ),
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 20.0),
                         child: Material(
@@ -161,8 +162,8 @@ class Liststate extends State<Listscreen> {
                     ],
                   );
                 },
-              )),
-          // This trailing comma makes auto-formatting nicer for build methods.
+              ),
+          ),
         ),
       ]),
     );
