@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
-import 'auth.dart';
-import 'register.dart';
-import 'listscreen.dart';
+import 'package:gdsc/auth.dart';
+import 'package:gdsc/home.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:gdsc/listscreen.dart';
+import 'package:gdsc/onBoardings/onboarding1.dart';
+
+import 'onBoardings/onboarding2.dart';
+import 'onBoardings/onboarding3.dart';
+import 'register.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,6 +37,9 @@ class MyApp extends StatelessWidget {
       initialRoute: Home.id,
       routes: {
         Home.id: (context) => Home(),
+        OnBoarding1.id: (context) => const OnBoarding1(),
+        OnBoarding2.id: (context) => const OnBoarding2(),
+        OnBoarding3.id: (context) => const OnBoarding3(),
         Auth.id: (context) => Auth(),
         Register.id: (context) => Register(),
         Listscreen.id: (context) => Listscreen(),
