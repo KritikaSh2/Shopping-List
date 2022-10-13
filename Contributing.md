@@ -69,6 +69,6 @@ git push -u origin <your_branch_name>
 **13.** Click on `Create Pull Request`.
 
 
-**14.** Woohoo! You have made a PR to the Shopping-List. Wait for your submission to be accepted and your PR to be merged.
+**14.**You have made a PR to the Shopping-List. Wait for your submission to be accepted and your PR to be merged.
 
 **Thank you for your interest in contributing to this repo🏼**
