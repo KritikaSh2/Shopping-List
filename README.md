@@ -7,11 +7,6 @@ In this app, the user has to login or create an account using email. The user ca
 
 When the checkbox is checked, the items will be striked. In addition to this, the user has a provision to remove items b swiping either left or right on the item tile. The items are stored and fetched dynamicslly from firebase firestore.
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/72745563/193397791-c396102d-fc92-4772-b94a-d9a67b02310a.png">
-<img src="https://user-images.githubusercontent.com/52650290/188079131-55a6a070-506e-4330-8f19-15f36791061c.png">
-</p>  
-
 ## Functionalities :-
 ##1. Authentication
 
