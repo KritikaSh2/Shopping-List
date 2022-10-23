@@ -102,10 +102,13 @@ class Registerscreen extends State<Register> {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.0),
-                  child: Material(
-                    color: Colors.lightBlueAccent,
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: MaterialButton(
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 56,
+                    child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      color: Colors.lightBlueAccent,
                       onPressed: () async {
                         try {
                           final newuser =
@@ -118,16 +121,41 @@ class Registerscreen extends State<Register> {
                           print(e);
                         }
                       },
-                      minWidth: 200.0,
-                      height: 42.0,
                       child: Text(
                         'Submit',
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 30,
+                          color: Colors.white,
                         ),
                       ),
                     ),
                   ),
+                  // Material(
+                  //   color: Colors.lightBlueAccent,
+                  //   borderRadius: BorderRadius.circular(20.0),
+                  //   child: MaterialButton(
+                  //     onPressed: () async {
+                  //       try {
+                  //         final newuser =
+                  //             await _register.createUserWithEmailAndPassword(
+                  //                 email: email, password: password);
+                  //         if (newuser != null) {
+                  //           Navigator.pushNamed(context, Listscreen.id);
+                  //         }
+                  //       } catch (e) {
+                  //         print(e);
+                  //       }
+                  //     },
+                  //     minWidth: 200.0,
+                  //     height: 42.0,
+                  //     child: Text(
+                  //       'Submit',
+                  //       style: TextStyle(
+                  //         fontSize: 30.0,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ),
               ],
             ),
