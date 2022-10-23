@@ -43,23 +43,42 @@ class Homescreen extends State<Home> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: Material(
-                  color: Colors.lightBlueAccent,
-                  borderRadius: BorderRadius.circular(20.0),
-                  child: MaterialButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, OnBoarding1.id);
-                    },
-                    minWidth: 200.0,
-                    height: 42.0,
-                    child: const Text(
-                      'Start',
-                      style: TextStyle(
-                        fontSize: 30.0,
+                child: SizedBox(
+                    width: double.infinity,
+                    height: 56,
+                    child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      color: Colors.lightBlueAccent,
+                      onPressed: () {
+                        Navigator.pushNamed(context, OnBoarding1.id);
+                      },
+                      child: Text(
+                        'Start',
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                ),
+                  )
+                // Material(
+                //   color: Colors.lightBlueAccent,
+                //   borderRadius: BorderRadius.circular(20.0),
+                //   child: MaterialButton(
+                //     onPressed: () {
+                //       Navigator.pushNamed(context, OnBoarding1.id);
+                //     },
+                //     minWidth: 200.0,
+                //     height: 42.0,
+                //     child: const Text(
+                //       'Start',
+                //       style: TextStyle(
+                //         fontSize: 30.0,
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ),
             ],
           ),
