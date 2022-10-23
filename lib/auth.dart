@@ -105,10 +105,13 @@ class Authscreen extends State<Auth> {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.0),
-                  child: Material(
-                    color: Colors.lightBlueAccent,
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: MaterialButton(
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 56,
+                    child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      color: Colors.lightBlueAccent,
                       onPressed: () async {
                         try {
                           final user = await _auth.signInWithEmailAndPassword(
@@ -140,36 +143,99 @@ class Authscreen extends State<Auth> {
                           );
                         }
                       },
-                      minWidth: 200.0,
-                      height: 42.0,
                       child: Text(
                         'Login',
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 30,
+                          color: Colors.white,
                         ),
                       ),
                     ),
-                  ),
-                ),
+                  ),),
+                //   Material(
+                //     color: Colors.lightBlueAccent,
+                //     borderRadius: BorderRadius.circular(20.0),
+                //     child: MaterialButton(
+                //       onPressed: () async {
+                //         try {
+                //           final user = await _auth.signInWithEmailAndPassword(
+                //               email: email, password: password);
+
+                //           if (user != null) {
+                //             Navigator.pushReplacementNamed(
+                //                 context, Listscreen.id);
+                //           }
+                //         } catch (e) {
+                //           var alert = AlertDialog(
+                //             title: Text('User Not Found'),
+                //             content: Text(
+                //                 "The entered email/password is incorrect or is not registered.\nPlease try again."),
+                //             actions: [
+                //               MaterialButton(
+                //                 child: Text("OK"),
+                //                 onPressed: () {
+                //                   Navigator.of(context).pop();
+                //                 },
+                //               )
+                //             ],
+                //           );
+                //           showDialog(
+                //             context: context,
+                //             builder: (BuildContext context) {
+                //               return alert;
+                //             },
+                //           );
+                //         }
+                //       },
+                //       minWidth: 200.0,
+                //       height: 42.0,
+                //       child: Text(
+                //         'Login',
+                //         style: TextStyle(
+                //           fontSize: 30.0,
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 0.0),
-                  child: Material(
-                    color: Colors.lightBlueAccent,
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: MaterialButton(
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 56,
+                    child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      color: Colors.lightBlueAccent,
                       onPressed: () {
                         Navigator.pushNamed(context, Register.id);
                       },
-                      minWidth: 200.0,
-                      height: 42.0,
                       child: Text(
                         'Signup',
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 30,
+                          color: Colors.white,
                         ),
                       ),
                     ),
                   ),
+                  // Material(
+                  //   color: Colors.lightBlueAccent,
+                  //   borderRadius: BorderRadius.circular(20.0),
+                  //   child: MaterialButton(
+                  //     onPressed: () {
+                  //       Navigator.pushNamed(context, Register.id);
+                  //     },
+                  //     minWidth: 200.0,
+                  //     height: 42.0,
+                  //     child: Text(
+                  //       'Signup',
+                  //       style: TextStyle(
+                  //         fontSize: 30.0,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ),
               ],
             ),
