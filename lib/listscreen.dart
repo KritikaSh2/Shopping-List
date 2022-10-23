@@ -30,7 +30,7 @@ class Liststate extends State<Listscreen> {
       final user = await _auth.currentUser;
       if (user != null) {
         loggedin = user;
-        
+
         setState(() {
           name = user.email!;
         });
@@ -67,9 +67,9 @@ class Liststate extends State<Listscreen> {
                     "${name}'s List\n(Swipe left/right to delete)",
                     textAlign: TextAlign.center,
                     style:
-                        TextStyle(color: Colors.grey.shade800, fontSize: 20.0),
+                        TextStyle(color: Colors.white, fontSize: 20.0),
                   ),
-            backgroundColor: Colors.transparent,
+            backgroundColor: Colors.lightBlueAccent,
             actions: <Widget>[
               IconButton(
                   onPressed: () {
@@ -125,7 +125,7 @@ class Liststate extends State<Listscreen> {
                                 image: AssetImage('assets/images/list.jpg'),
                                 fit: BoxFit.cover),
                             color: Colors.transparent,
-                            border: Border.all(color: Colors.black87),
+                            border: Border.all(color: Colors.blue),
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(10.0),
                               topRight: Radius.circular(10.0),
@@ -135,29 +135,51 @@ class Liststate extends State<Listscreen> {
                         child: ListS(items),
                       )),
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: 20.0),
-                        child: Material(
-                          color: Colors.blueGrey,
-                          borderRadius: BorderRadius.circular(20.0),
-                          child: MaterialButton(
-                            onPressed: () {
-                              showModalBottomSheet(
-                                  context: context,
-                                  builder: (context) => AddItem(),
-                                  isScrollControlled: true);
-                            },
-                            minWidth: 200.0,
-                            height: 42.0,
-                            child: Text(
-                              'Add Items',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30.0,
+                          padding: EdgeInsets.symmetric(vertical: 20.0),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: 56,
+                            child: FlatButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              color: Colors.lightBlueAccent,
+                              onPressed: () {
+                                showModalBottomSheet(
+                                    context: context,
+                                    builder: (context) => AddItem(),
+                                    isScrollControlled: true);
+                              },
+                              child: Text(
+                                'Add Item',
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
+                          )
+                          // Material(
+                          //   color: Colors.lightBlueAccent,
+                          //   borderRadius: BorderRadius.circular(20.0),
+                          //   child: MaterialButton(
+                          //     onPressed: () {
+                          //       showModalBottomSheet(
+                          //           context: context,
+                          //           builder: (context) => AddItem(),
+                          //           isScrollControlled: true);
+                          //     },
+                          //     minWidth: 200.0,
+                          //     height: 42.0,
+                          //     child: Text(
+                          //       'Add Items',
+                          //       style: TextStyle(
+                          //         color: Colors.white,
+                          //         fontSize: 30.0,
+                          //       ),
+                          //     ),
+                          //   ),
+                          // ),
                           ),
-                        ),
-                      ),
                     ],
                   );
                 },
