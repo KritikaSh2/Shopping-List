@@ -59,7 +59,7 @@ class _AddItemState extends State<AddItem> {
             style: TextStyle(
               fontSize: 40.0,
               fontWeight: FontWeight.w700,
-              color: Colors.blueAccent,
+              color: Colors.lightBlueAccent,
             ),
           ),
           SizedBox(
@@ -94,47 +94,89 @@ class _AddItemState extends State<AddItem> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 20.0),
-            child: Material(
-              color: Colors.blueGrey,
-              borderRadius: BorderRadius.circular(20.0),
-              child: MaterialButton(
-                onPressed: () async {
-                  if (newname != null && newprice != null) {
-                    Navigator.pop(context);
-                    save();
-                  } else {
-                    var alert = AlertDialog(
-                      title: Text('Insufficient Data'),
-                      content: Text(
-                          "One or both of the above fields are empty.\nPlease fill all the fields."),
-                      actions: [
-                        MaterialButton(
-                          child: Text("OK"),
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                        )
-                      ],
-                    );
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return alert;
-                      },
-                    );
-                  }
-                },
-                minWidth: 200.0,
-                height: 42.0,
-                child: Text(
-                  'Add Item',
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    color: Colors.white70,
+            child: SizedBox(
+                width: double.infinity,
+                height: 56,
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  color: Colors.lightBlueAccent,
+                  onPressed: () async {
+                    if (newname != null && newprice != null) {
+                      Navigator.pop(context);
+                      save();
+                    } else {
+                      var alert = AlertDialog(
+                        title: Text('Insufficient Data'),
+                        content: Text(
+                            "One or both of the above fields are empty.\nPlease fill all the fields."),
+                        actions: [
+                          MaterialButton(
+                            child: Text("OK"),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          )
+                        ],
+                      );
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return alert;
+                        },
+                      );
+                    }
+                  },
+                  child: Text(
+                    'Add Item',
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-            ),
+              )
+            // Material(
+            //   color: Colors.blueGrey,
+            //   borderRadius: BorderRadius.circular(20.0),
+            //   child: MaterialButton(
+            //     onPressed: () async {
+            //       if (newname != null && newprice != null) {
+            //         Navigator.pop(context);
+            //         save();
+            //       } else {
+            //         var alert = AlertDialog(
+            //           title: Text('Insufficient Data'),
+            //           content: Text(
+            //               "One or both of the above fields are empty.\nPlease fill all the fields."),
+            //           actions: [
+            //             MaterialButton(
+            //               child: Text("OK"),
+            //               onPressed: () {
+            //                 Navigator.of(context).pop();
+            //               },
+            //             )
+            //           ],
+            //         );
+            //         showDialog(
+            //           context: context,
+            //           builder: (BuildContext context) {
+            //             return alert;
+            //           },
+            //         );
+            //       }
+            //     },
+            //     minWidth: 200.0,
+            //     height: 42.0,
+            //     child: Text(
+            //       'Add Item',
+            //       style: TextStyle(
+            //         fontSize: 30.0,
+            //         color: Colors.white70,
+            //       ),
+            //     ),
+            //   ),
+            // ),
           ),
         ],
       ),
