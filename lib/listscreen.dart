@@ -53,7 +53,7 @@ class Liststate extends State<Listscreen> {
         Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/login.jpg'),
+                image: AssetImage('assets/images/list.jpg'),
                 fit: BoxFit.cover),
           ),
         ),
@@ -121,11 +121,11 @@ class Liststate extends State<Listscreen> {
                       Expanded(
                           child: Container(
                         decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/images/list.jpg'),
-                                fit: BoxFit.cover),
-                            color: Colors.transparent,
-                            border: Border.all(color: Colors.blue),
+                            // image: DecorationImage(
+                            //     image: AssetImage('assets/images/list.jpg'),
+                            //     fit: BoxFit.cover),
+                            // color: Colors.transparent,
+                            // border: Border.all(color: Colors.blue),
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(10.0),
                               topRight: Radius.circular(10.0),
@@ -227,7 +227,7 @@ class _ListSState extends State<ListS> {
                 key: Key(key.id),
                 background: Container(
                   decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: Colors.lightBlueAccent,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(10.0),
                         topRight: Radius.circular(10.0),
@@ -281,11 +281,12 @@ class ListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(name,
+      title: Text(name.isEmpty?name:name[0].toUpperCase() + name.substring(1),
           style: check == true
               ? TextStyle(
                   fontSize: 25,
                   decoration: TextDecoration.lineThrough,
+                  color: Colors.black.withOpacity(0.4)
                 )
               : TextStyle(
                   fontSize: 25,
@@ -295,6 +296,7 @@ class ListItem extends StatelessWidget {
               ? TextStyle(
                   fontSize: 25,
                   decoration: TextDecoration.lineThrough,
+                  color: Colors.black.withOpacity(0.4)
                 )
               : TextStyle(
                   fontSize: 25,
@@ -302,13 +304,19 @@ class ListItem extends StatelessWidget {
       trailing: Checkbox(
         value: check,
         onChanged: checkCallback,
+        activeColor: Colors.lightBlueAccent,
       ),
       subtitle: Text(
         time,
-        style: TextStyle(
-          fontSize: 15,
-        ),
-      ),
+        style: check == true
+              ? TextStyle(
+                  fontSize: 15,
+                  decoration: TextDecoration.lineThrough,
+                  color: Colors.black.withOpacity(0.4)
+                )
+              : TextStyle(
+                  fontSize: 15,
+                ),),
     );
   }
 }
