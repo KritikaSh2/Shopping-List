@@ -31,7 +31,7 @@ class _OnBoarding1State extends State<OnBoarding1> {
             height: 20,
           ),
           const Text(
-            'Make your shopping easy with SHOPIST APP',
+            'Make your shopping easy with SHOPIFY APP',
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.w400, fontSize: 16),
           ),
