@@ -36,7 +36,7 @@ class _OnBoarding2State extends State<OnBoarding2> {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              'Make a shopping List with SHOPIST. All your items appears with name and price. You can delete them or mark as completed.',
+              'Make a shopping List with SHOPIFY. All your items appears with name and price. You can delete them or mark as completed.',
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.black,
