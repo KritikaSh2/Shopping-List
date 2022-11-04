@@ -28,7 +28,7 @@ class Homescreen extends State<Home> {
               Column(
                 children: const <Widget>[
                   Text(
-                    'SHOPIST',
+                    'SHOPIFY',
                     style:
                         TextStyle(fontSize: 40.0, fontWeight: FontWeight.w800),
                   ),
